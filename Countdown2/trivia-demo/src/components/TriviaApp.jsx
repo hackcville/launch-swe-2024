@@ -5,7 +5,7 @@ const TriviaApp = () => {
 
     useEffect(() => {
         const fetchQuestions = async () => {
-            const response = await fetch("https://opentdb.com/api.php?amount=10&tojken=5bb4dcc7fc2a3ed10ac626e73d9812f79b1b0b4dfdebe197767a98db3c8a2251");
+            const response = await fetch("https://opentdb.com/api.php?amount=10");
             const data = await response.json();
             if(data.results) {
                 setQuestions(data.results);
